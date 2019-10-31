@@ -43,7 +43,6 @@ public class Utility {
                     city.setCityCode(cityObject.getInt("id"));
                     city.setProvinceId(provinceID);
                     city.save();
-
                 }
                 return true;
             } catch (JSONException e) {
@@ -73,7 +72,7 @@ public class Utility {
         }
         return  false;
     }
-    public static Weather handleWwethearResponse(String response){
+    public static Weather handleWethearResponse(String response){
         try {
             JSONObject jsonObject = new JSONObject(response);
             JSONArray jsonArray = jsonObject.getJSONArray("HeWeather");
